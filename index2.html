@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CSS Selectors Demo</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Tag and ID --h1#main--->
+  <h1 id="main-title">Locate elements by DOM/CSS</h1>
+
+  <!-- Tag and Class : p.description-->
+  <p class="description">Đây là đoạn mô tả.</p>
+
+  <!-- Tag and Attribute tag[attribute="value"] : ("input[name='email']")-->
+  <input type="text" name="email" placeholder="Nhập email">
+
+  <!-- Tag, Class, and Attribute : tag.class[attribute="value"] : ("button.btn[type='submit']")-->
+  <button class="btn" type="submit">Gửi</button>
+
+  <!-- Sub-string Match:
+-Starts With (^=) : ("div[class^='user-start']")
+-Ends With ($=) : ("div[class$='user-end-xyz']")
+-Contains (*=) : ("div[class*='mid-match']")
+ -->
+  <div class="user-info user-start-abc user-end-xyz user-mid-match">Thông tin người dùng</div>
+
+  <!-- Child Elements : parent child : ("ul.menu li")-->
+  <ul class="menu">
+    <li>Trang chủ</li>
+    <li>Giới thiệu</li>
+    <li>Liên hệ</li>
+  </ul>
+
+  <!-- Direct Child + Sub-child 
+  parent > child : ("div.parent > div.child")
+  ancestor descendant : ("div.parent span.sub-child")-->
+  <div class="parent">
+    <div class="child">Child 1</div>
+    <div class="child">
+      Child 2
+      <span class="sub-child">Sub-child</span>
+    </div>
+  </div>
+
+  <!-- nth-child : tag:nth-child(n) : ("ol.steps li:nth-child(2)")-->
+  <ol class="steps">
+    <li>Bước 1</li>
+    <li>Bước 2</li>
+    <li>Bước 3</li>
+  </ol>
+
+  <!--script src="script.js"></-script-->
+</body>
+</html>
